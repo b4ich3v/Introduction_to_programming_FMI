@@ -5,7 +5,7 @@
 int main()
 {
 
-	int number;
+	int number = 0;
 	std::cin >> number;
 
 	int thirdDigit = number % 10;
