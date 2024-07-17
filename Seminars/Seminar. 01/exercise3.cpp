@@ -5,7 +5,7 @@
 int main()
 {
 
-	char ch;
+	char ch = 'a';
 	std::cin >> ch;
 
 	bool isVowel = ch == 'a' || ch == 'e' || ch == 'o' || ch == 'u' || ch == 'i'
