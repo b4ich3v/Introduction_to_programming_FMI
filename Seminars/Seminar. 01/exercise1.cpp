@@ -1,7 +1,11 @@
 #include <iostream>
-using namespace std;
 
-int main() {
-    cout << "Hello, World!" << endl;
-    return 0;
+int main()
+{
+    
+	int number;
+	std::cin >> number;
+	bool isEven = number % 2 == 0;
+	std::cout << isEven;
+    
 }
