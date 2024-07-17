@@ -4,6 +4,7 @@
 
 int main()
 {
+	
 	int grade = 0;
 	std::cin >> grade;
 
