@@ -13,4 +13,6 @@ int main()
 
 	std::cout << isVowel << std::endl;
 
+	return 0;
+	
 }
