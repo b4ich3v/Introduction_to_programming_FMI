@@ -29,7 +29,7 @@ int main()
 		
 		int temp = number;
 
-		while (temp > 0 && temp % i == 0)
+		while (temp > 0 && (temp % i == 0))
 		{
 
 			temp /= i;
