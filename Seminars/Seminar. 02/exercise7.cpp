@@ -15,19 +15,19 @@ int main()
 	if (x * x + y * y < radius * radius)
 	{
 
-		std::cout << "In the circle";
+		std::cout << "In the circle" << std::endl;
 
 	}
 	else if (x * x + y * y == radius * radius)
 	{
 
-		std::cout << "On the circle";
+		std::cout << "On the circle" << std::endl;
 
 	}
 	else
 	{
 
-		std::cout << "Out of the circle";
+		std::cout << "Out of the circle" << std::endl;
 
 	}
 
