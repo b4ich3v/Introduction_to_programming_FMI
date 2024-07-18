@@ -19,13 +19,13 @@ int main()
 		|| (a >= b && b <= c && c >= d && d <= e))
 	{
 
-		std::cout << "Yes";
+		std::cout << "Yes" << std::endl;
 
 	}
 	else
 	{
 
-		std::cout << "No";
+		std::cout << "No" << std::endl;
 
 	}
 
