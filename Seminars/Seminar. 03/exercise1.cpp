@@ -13,7 +13,7 @@ int main()
     if (number1 <= 0 || number2 <= 0)
     {
 
-        std::cout << "Both numbers must be natural (greater than 0)." << std::endl;
+        std::cout << "Both numbers must be natural (greater than 0)" << std::endl;
 
     }
     else 
