@@ -10,10 +10,7 @@ bool areOnTheCircle(int a, int b, int c, int d)
 
 	int xB = c;
 	int yB = d;
-
-	int lenA = 0;
-	int lenB = 0;
-
+	
 	int lenAPower2 = xA * xA + yA * yA;
 	int lenBPower2 = xB * xB + yB * yB;
 
