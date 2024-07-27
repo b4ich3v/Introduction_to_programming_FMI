@@ -82,4 +82,6 @@ int main()
 
 	std::cout << searchInText(string, pattern);
 
+	return 0;
+
 }
