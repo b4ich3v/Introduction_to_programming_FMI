@@ -5,6 +5,30 @@
 const int MAX_WORDS = 100;
 const int MAX_WORD_LENGTH = 100;
 
+int customStrlen(char* string)
+{
+
+    if (string == nullptr)
+    {
+
+        return -1;
+
+    }
+
+    int size = 0;
+
+    while (*string != '\0')
+    {
+
+        string++;
+        size++;
+
+    }
+
+    return size;
+
+}
+
 int customStrcmp(const char* string1, const char* string2)
 {
 
@@ -127,7 +151,7 @@ const char* findLexicographicallySmallestWord(char* text)
     char words[MAX_WORDS][MAX_WORD_LENGTH] = { 0 };
     int wordCountSize = 0;
 
-    int length = strlen(text);
+    int length = customStrlen(text);
     char word[MAX_WORD_LENGTH] = { 0 };
     int wordIndex = 0;
 
