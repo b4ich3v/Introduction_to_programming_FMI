@@ -84,7 +84,7 @@ int determinant(int matrix[MAX_SIZE][MAX_SIZE], int size)
 
     }
 
-    for (int i = 0; i < size; ++i) 
+    for (int i = 0; i < size; i++) 
     {
 
         det *= temp[i][i];
