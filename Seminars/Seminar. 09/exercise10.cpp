@@ -138,9 +138,9 @@ void replaceInPlace(char* text, const char* where, const char* what)
 int main() 
 {
 
-    char text[100] = "Hello world! Hello everyone!";
-    const char* where = "Hello";
-    const char* what = "Hi";
+    char text[100] = "I am the best of the best";
+    const char* where = "best";
+    const char* what = "worst";
 
     replaceInPlace(text, where, what);
 
