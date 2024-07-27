@@ -171,7 +171,7 @@ const char* findMostFrequentWord(char words[MAX_WORDS][MAX_WORD_LENGTH], int cou
 int main() 
 {
 
-    char text[] = "Hello, world! Hello everyone. Welcome to the world of C++ programming. Hello!";
+    char text[] = "Me? Why always me?";
 
     toLowerCase(text);
     cleanString(text);
