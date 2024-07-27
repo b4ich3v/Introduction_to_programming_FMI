@@ -30,13 +30,13 @@ void transposeMatrix(int matrix[MAX_SIZE][MAX_SIZE], int size)
 
 }
 
-void printMatrix(int matrix[MAX_SIZE][MAX_SIZE], int N)
+void printMatrix(int matrix[MAX_SIZE][MAX_SIZE], int size)
 {
 
-    for (int i = 0; i < N; ++i) 
+    for (int i = 0; i < size; i++)
     {
 
-        for (int j = 0; j < N; ++j) 
+        for (int j = 0; j < size; j++)
         {
 
             std::cout << matrix[i][j] << " ";
