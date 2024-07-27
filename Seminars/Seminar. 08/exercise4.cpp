@@ -13,10 +13,10 @@ void swap(int& a, int& b)
 
 }
 
-double determinant(int matrix[MAX_SIZE][MAX_SIZE], int size) 
+int determinant(int matrix[MAX_SIZE][MAX_SIZE], int size) 
 {
 
-    double det = 1.0;
+    int det = 1;
     int temp[MAX_SIZE][MAX_SIZE];
 
     for (int i = 0; i < size; i++) 
@@ -71,7 +71,7 @@ double determinant(int matrix[MAX_SIZE][MAX_SIZE], int size)
         for (int j = i + 1; j < size; j++) 
         {
 
-            double factor = (double)(temp[j][i]) / temp[i][i];
+            int factor = (int)(temp[j][i]) / temp[i][i];
 
             for (int k = i; k < size; k++) 
             {
@@ -142,7 +142,7 @@ int main()
 
     }
 
-    double det = determinant(matrix, size);
+    int det = determinant(matrix, size);
     std::cout << det << std::endl;
 
     return 0;
