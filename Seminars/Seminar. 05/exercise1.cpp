@@ -1,5 +1,3 @@
-// Да се напише функция, която приема масив и връща дали е палиндром.
-
 #include <iostream>
 
 bool isPalindrome(int* array, int size)
