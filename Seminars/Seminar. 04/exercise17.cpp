@@ -1,5 +1,3 @@
-// Напишете функция, която приема естествено число и връща дали цифрите му са еднакви.
-
 #include <iostream>
 
 bool areAllDigitsEqual(int number)
