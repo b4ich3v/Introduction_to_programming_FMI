@@ -1,5 +1,3 @@
-// Напишете функция, която приема масив и връща масив от масиви, на който елементите му са всички непразни подмасиви на дадения.
-
 #include <iostream>
 
 int** generateAllSubsets(int* array, int size, int& countOfSubsets)
