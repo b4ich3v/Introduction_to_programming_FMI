@@ -1,5 +1,3 @@
-// ToBinaryFromDecimal
-
 #include <iostream>
 
 unsigned int toBinaryFromDecimal(unsigned int number)
