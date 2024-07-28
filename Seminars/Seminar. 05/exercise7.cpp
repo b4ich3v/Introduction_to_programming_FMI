@@ -1,5 +1,3 @@
-// BinarySearch
-
 #include <iostream>
 
 int binaraySearch(int* array, int size, int element)
