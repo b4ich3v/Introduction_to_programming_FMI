@@ -6,11 +6,19 @@ int* totalPoints = nullptr;
 int* teamIndices = nullptr;
 int numTeams = 0;
 
-void initializeTeam(int teamIndex, int playerCount) 
+void initializeTeam(int teamIndex, int playerCount)
 {
-
+   
     players[teamIndex] = new int[playerCount];
-    std::memset(players[teamIndex], 0, playerCount * sizeof(int));
+
+
+    for (int i = 0; i < playerCount; i++)
+    {
+
+        players[teamIndex][i] = 0;
+
+    }
+
     numPlayers[teamIndex] = playerCount;
     totalPoints[teamIndex] = 0;
 
@@ -19,28 +27,28 @@ void initializeTeam(int teamIndex, int playerCount)
 void addPoints(int teamIndex, int playerIndex, int points)
 {
 
-    if (playerIndex >= 0 && playerIndex < numPlayers[teamIndex]) 
+    if (playerIndex >= 0 && playerIndex < numPlayers[teamIndex])
     {
 
-        totalPoints[teamIndex] -= players[teamIndex][playerIndex]; 
+        totalPoints[teamIndex] -= players[teamIndex][playerIndex];
         players[teamIndex][playerIndex] += points;
-        totalPoints[teamIndex] += players[teamIndex][playerIndex]; 
+        totalPoints[teamIndex] += players[teamIndex][playerIndex];
 
     }
 
 }
 
-void printTeams() 
+void printTeams()
 {
 
-    for (int i = 0; i < numTeams; i++) 
+    for (int i = 0; i < numTeams; i++)
     {
 
         int teamIndex = teamIndices[i];
 
         std::cout << "Team " << teamIndex + 1 << " (Total Points: " << totalPoints[teamIndex] << "): ";
 
-        for (int j = 0; j < numPlayers[teamIndex]; j++) 
+        for (int j = 0; j < numPlayers[teamIndex]; j++)
         {
 
             std::cout << players[teamIndex][j] << " ";
@@ -53,13 +61,13 @@ void printTeams()
 
 }
 
-void sortTeams() 
+void sortTeams()
 {
 
-    for (int i = 0; i < numTeams - 1; i++) 
+    for (int i = 0; i < numTeams - 1; i++)
     {
 
-        for (int j = 0; j < numTeams - 1 - i; j++) 
+        for (int j = 0; j < numTeams - 1 - i; j++)
         {
 
             if (totalPoints[teamIndices[j]] < totalPoints[teamIndices[j + 1]])
@@ -77,7 +85,7 @@ void sortTeams()
 
 }
 
-int main() 
+int main()
 {
 
     std::cout << "Enter number of teams: ";
@@ -88,7 +96,7 @@ int main()
     totalPoints = new int[numTeams];
     teamIndices = new int[numTeams];
 
-    for (int i = 0; i < numTeams; i++) 
+    for (int i = 0; i < numTeams; i++)
     {
 
         int playerCount;
@@ -101,7 +109,7 @@ int main()
 
     }
 
-    while (true) 
+    while (true)
     {
 
         int teamIndex, playerIndex, points;
@@ -123,7 +131,7 @@ int main()
 
     }
 
-    for (int i = 0; i < numTeams; i++) 
+    for (int i = 0; i < numTeams; i++)
     {
 
         delete[] players[i];
