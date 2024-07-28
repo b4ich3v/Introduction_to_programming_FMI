@@ -1,5 +1,3 @@
-// Напишете функция, която приема масив(разглеждаме го като множество) и отпечатва всички негови подмножества.
-
 #include <iostream>
 
 void printSubset(int* array, int size, int mask)
