@@ -1,5 +1,3 @@
-// Напишете функция, която приема неотрицателно число и връща дали числото е палиндром.
-
 #include <iostream>
 
 int inversedNumber(int number) 
