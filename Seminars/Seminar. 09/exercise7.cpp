@@ -1,5 +1,3 @@
-// Напишете функция, която намира броя на срещанията на конкретен символ в текст.
-
 #include <iostream>
 
 int countOfApp(char* string, char ch)
