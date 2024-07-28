@@ -1,5 +1,3 @@
-// Напишете функция, която приема две естествени числа и връща n^k.
-
 #include <iostream>
 
 int powerOfNumber(int n, int k) 
