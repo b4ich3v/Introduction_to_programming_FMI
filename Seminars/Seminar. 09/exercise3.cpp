@@ -1,5 +1,3 @@
-// Напишете функция, която конкатенира два стринга.
-
 #include <iostream>
 
 char* customStrcat(char* destination, const char* source) 
