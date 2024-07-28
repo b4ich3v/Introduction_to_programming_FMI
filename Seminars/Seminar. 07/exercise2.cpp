@@ -1,5 +1,3 @@
-// Напишете функция, която приема цяло число и връща броя на 1-ците в двоичния му запис.
-
 #include <iostream>
 
 int countOfUpperBits(int number) 
