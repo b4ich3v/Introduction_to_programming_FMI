@@ -1,5 +1,3 @@
-// Напишете функция, която приема цяло число и връща модула му.
-
 #include <iostream>
 
 int absoluteOfNumber(int number)
