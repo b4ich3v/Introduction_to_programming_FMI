@@ -1,5 +1,3 @@
-// FromRandomToDecimal
-
 #include <iostream>
 
 int getIndexOfSymbol(char ch)
