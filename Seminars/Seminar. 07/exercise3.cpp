@@ -1,5 +1,3 @@
-// Напишете функция, която приема цяло число и обръща най-десния бит в него, който е единица.
-
 #include <iostream>
 
 bool checkBit(int number, int index)
