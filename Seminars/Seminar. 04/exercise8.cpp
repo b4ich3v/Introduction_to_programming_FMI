@@ -1,5 +1,3 @@
-// Напишете функция, която приема неотрицателно числа n и k връща log_k(n) (закръглено надолу)
-
 #include <iostream>
 
 int logBaseK(int n, int k)
