@@ -1,5 +1,3 @@
-// Напишете функция, която приема неотрицателни числа n и k и връща дали k е префикс на n.
-
 #include <iostream>
 
 int countOfDigits(int number)
