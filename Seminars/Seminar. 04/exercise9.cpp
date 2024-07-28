@@ -1,5 +1,3 @@
-//  Напишете функция, която приема 4 цели числа - a,b,c,d и връща дали точката <a,b> и точката <c,d> лежат на една окръжност с център <0,0>.
-
 #include <iostream>
 
 bool areOnTheCircle(int a, int b, int c, int d) 
