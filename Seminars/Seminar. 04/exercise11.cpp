@@ -1,5 +1,3 @@
-// Напишете функция, която приема цяло число и връща броя на цифрите му.
-
 #include <iostream>
 
 int countOfDigits(int number)
