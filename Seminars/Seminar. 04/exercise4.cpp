@@ -1,5 +1,3 @@
-// Напишете функция, която приема неотрицателни числа n и k и връща дали k е суфикс на n.
-
 #include <iostream>
 
 int inversedNumber(int number)
