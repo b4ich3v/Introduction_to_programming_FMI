@@ -1,5 +1,3 @@
-// Да се напише функция, която приема масив от целия числа, който е получен след конкатенация на два сортирани масив, и го сортира.
-
 #include <iostream>
 
 void merge(const int* array1, int size1, const int* array2, int size2, int* result)
