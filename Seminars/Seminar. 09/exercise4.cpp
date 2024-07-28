@@ -1,5 +1,3 @@
-// Напишете функция, която проверява дали два стринга са еднакви.
-
 #include <iostream>
 
 int customStrcmp(const char* string1, const char* string2) 
