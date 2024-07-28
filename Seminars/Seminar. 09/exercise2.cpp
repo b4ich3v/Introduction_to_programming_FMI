@@ -1,5 +1,3 @@
-// Напишете функция, която копира даден стринг.
-
 #include <iostream>
 
 char* customStrcpy(char* destination, const char* source) 
