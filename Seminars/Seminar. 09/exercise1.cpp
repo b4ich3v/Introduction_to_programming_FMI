@@ -1,5 +1,3 @@
-// Напишете функция, която пресмята дължината на даден стринг (без '\0').
-
 #include <iostream>
 
 int customStrlen(char* string)
