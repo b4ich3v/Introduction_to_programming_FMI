@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 int findSpecialNumber(int* array, int size)
 {
 
