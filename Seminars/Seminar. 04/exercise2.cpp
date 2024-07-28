@@ -1,5 +1,3 @@
-// Напишете функция, която приема неотрицателно число n и връща числото обърнато
-
 #include <iostream>
 
 int inversedNumber(int number) 
