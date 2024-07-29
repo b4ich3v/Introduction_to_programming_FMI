@@ -9,11 +9,10 @@ int main()
     std::cin >> number1 >> number2;
 
     int remainder = number1 % number2;
-    int especially = number1 / number2;
+    int quotient = number1 / number2;
 
-    std::cout << remainder << " " << especially;
+    std::cout << remainder << " " << quotient;
 
     return 0;
 
 }
-
