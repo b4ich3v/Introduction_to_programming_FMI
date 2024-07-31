@@ -1,5 +1,22 @@
 #include <iostream>
 
+int sizeOfString(char* string)
+{
+
+    int size = 0;
+
+    while (*string != '\0')
+    {
+
+        string++;
+        size++;
+
+    }
+
+    return size;
+
+}
+
 int CheckStr(char string[]) 
 {
    
@@ -10,19 +27,8 @@ int CheckStr(char string[])
 
     }
 
-    int size = 0;
-    char* scan = string;
-
-    while (*scan != '\0') 
-    {
-
-        size++;
-        scan++;
-
-    }
-
-    scan = nullptr;
-
+    int size = sizeOfString(string);
+   
     if (size < 2)
     {
 
