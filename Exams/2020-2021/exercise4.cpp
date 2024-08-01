@@ -51,7 +51,8 @@ int main()
     std::cout << "{" << result[0] << ",";
     std::cout << result[1] << "}";
 
+    delete[] result;
+
     return 0;
 
 }
-
