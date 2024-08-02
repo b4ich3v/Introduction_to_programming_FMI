@@ -15,9 +15,9 @@ int findElement(long arr[], int l)
     while (index != l - 1) 
     {
 
-        int sredna = (arr[index] + arr[index + 2]) / 2;
+        int average = (arr[index] + arr[index + 2]) / 2;
 
-        if (arr[index + 1] > sredna) 
+        if (arr[index + 1] > average) 
         {
 
             return arr[index + 1];
@@ -44,4 +44,3 @@ int main()
     return 0;
 
 }
-
