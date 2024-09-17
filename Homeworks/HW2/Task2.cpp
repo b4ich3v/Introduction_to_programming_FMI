@@ -17,62 +17,85 @@ const int MAX_LENGTH = 1000;
 
 bool isTextValidation(char* text, int lenText)
 {
+
 	for (int i = 0; i < lenText; i++)
 	{
+
 		if (text[i] >= 'A' && text[i] <= 'Z')
 		{
+
 			continue;
+
 		}
 
 		if (text[i] >= 'a' && text[i] <= 'z')
 		{
+
 			continue;
+
 		}
 
 		if (text[i] >= '0' && text[i] <= '9')
 		{
+
 			continue;
+
 		}
 
 		if (text[i] == ' ')
 		{
+
 			continue;
+
 		}
 
 		return false;
+
 	}
 
 	return true;
+
 }
 
 bool isTempValidation(char* temp, int lenTemp) // Checks that the character string passed as a parameter
 {                                              // contains only letters (upper and lower case), numbers, spaces,
 	for (int i = 0; i < lenTemp; i++)          // and certain special characters for the isTempValidation function ('%', '@', '*', and space).
 	{
+
 		if (temp[i] >= 'A' && temp[i] <= 'Z')
 		{
+
 			continue;
+
 		}
 
 		if (temp[i] >= 'a' && temp[i] <= 'z')
 		{
+
 			continue;
+
 		}
 
 		if (temp[i] >= '0' && temp[i] <= '9')
 		{
+
 			continue;
+
 		}
 
 		if (temp[i] == ' ' || temp[i] == '%' || temp[i] == '@' || temp[i] == '*')
 		{
+
 			continue;
+
 		}
 
 		return false;
+
 	}
 
 	return true;
+
 }
 
 int dimOfString(int length, char* str) // Calculates the length of a character string by counting the characters until it reaches the terminating character '\0'.
@@ -80,7 +103,9 @@ int dimOfString(int length, char* str) // Calculates the length of a character s
 
 	while (str[length] != '\0')
 	{
+
 		length++;
+
 	}
 
 	return length;
@@ -91,11 +116,13 @@ void matchSearch(char* text, char* temp, int lenText, int lenTemp, int idxText, 
 {
 
 	if (idxTemp >= lenTemp && prevFoundMatchIndex != idxText) // We use indices (idxText and idxTemp) to track the current position in the two strings.
-	{                                                         // When different characters are encountered, it interrupts the current search and continues
+	{       
+                                                  // When different characters are encountered, it interrupts the current search and continues
 		prevFoundMatchIndex = idxText;
 		counter++;
 		idxTemp = 0;
 		return;
+
 	}
 
 	if (text[idxText] != '\0') // We support the characters '*', '%', and '@' as special patterns.
@@ -103,66 +130,86 @@ void matchSearch(char* text, char* temp, int lenText, int lenTemp, int idxText, 
 
 		if (text[idxText] == temp[idxTemp])
 		{
-			++idxText;
-			++idxTemp;
+
+			idxText++;
+			idxTemp++;
 			matchSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter, prevFoundMatchIndex);
 
 		}
 
 		else if (temp[idxTemp] == '*')
 		{
-			++idxText;
-			++idxTemp;
+
+			idxText++;
+			idxTemp++;
 			matchSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter, prevFoundMatchIndex);
+
 		}
 
 		else if (temp[idxTemp] == '%')
 		{
+
 			if ((text[idxText] >= '0' && text[idxText] <= '9'))
 			{
 
-				++idxText;
-				++idxTemp;
+				idxText++;
+				idxTemp++;
 
 				if (idxText == lenText - 1)
 				{
+
 					matchSearch(text, temp, lenText, lenTemp, idxText + 1, idxTemp, counter, prevFoundMatchIndex);
+
 				}
 
 				else if (text[idxText + 1] >= '0' && text[idxText] <= '9')
 				{
+
 					matchSearch(text, temp, lenText, lenTemp, idxText + 1, idxTemp, counter, prevFoundMatchIndex);
+
 				}
 
 				matchSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter, prevFoundMatchIndex);
+
 			}
 			else
 			{
+
 				return;
+
 			}
+
 		}
 
 		else if (temp[idxTemp] == '@')
 		{
+
 			if ((text[idxText] >= 'A' && text[idxText] <= 'Z')
 				|| (text[idxText] >= 'a' && text[idxText] <= 'z'))
 			{
-				++idxText;
-				++idxTemp;
-				matchSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter, prevFoundMatchIndex);
-			}
 
+				idxText++;
+				idxTemp++;
+				matchSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter, prevFoundMatchIndex);
+
+			}
 			else
 			{
-				return;
-			}
-		}
 
+				return;
+
+			}
+
+		}
 		else
 		{
+
 			return;
+
 		}
+
 	}
+
 }
 
 int strStartSearch(char* text, char* temp, int lenText, int lenTemp, int idxText, int idxTemp, int& counter) // Searches for all possible matches between the two character strings
@@ -170,6 +217,7 @@ int strStartSearch(char* text, char* temp, int lenText, int lenTemp, int idxText
 
 	for (int i = 0; i <= lenText - lenTemp; i++)
 	{
+
 		int idxText = i;
 		int idxTemp = 0;
 		int prevFoundIndex = -1;
@@ -178,6 +226,7 @@ int strStartSearch(char* text, char* temp, int lenText, int lenTemp, int idxText
 	}
 
 	return counter;
+
 }
 
 int main()
@@ -189,11 +238,8 @@ int main()
 	std::cin.getline(text, MAX_LENGTH);
 	std::cin.getline(temp, MAX_LENGTH);
 
-
-
 	int lenText = dimOfString(0, text);
 	int lenTemp = dimOfString(0, temp);
-
 
 	if (isTextValidation(text, lenText) && isTempValidation(temp, lenTemp)) // We use the functions dimOfString, isTextValidation, and isTempValidation to validate input strings.
 	{                                                                       // If the input is valid, calls the strStartSearch function to perform the search and outputs the result to standard output.
@@ -203,14 +249,15 @@ int main()
 		int counter = 0;
 
 		std::cout << strStartSearch(text, temp, lenText, lenTemp, idxText, idxTemp, counter);
-	}
 
+	}
 	else
 	{
+
 		std::cout << "Invalid input" << std::endl;
+
 	}
 
 	return 0;
 
 }
-
